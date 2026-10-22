@@ -40,3 +40,6 @@ npm config set registry https://registry.npmmirror.com
 go env -w GOPROXY=https://goproxy.cn,direct
 # rust 体积大（~400MB），按需手动: apk add rust cargo
 # php: apk add php83 php83-cli php83-phar
+
+# 远程连接（可选）
+apk add --no-cache openssh-client rsync

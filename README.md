@@ -59,3 +59,7 @@
 | PHP | ⚪ 可选 | `apk add php83 php83-cli php83-phar` |
 | Kotlin/Scala/Groovy | ⚪ 可选 | `langdev init kotlin` 走 openjdk17 |
 | .NET | ⚪ 可选 | `apk add dotnet8`（体积大） |
+
+## 远程连接
+`openssh-client` + `rsync` 已装：`ssh` / `scp` / `rsync` / `ssh-keygen` 可用。
+SSH 只在**本机没有 shell 历史问题**时可用——每条命令是无状态执行，需要用 `ssh -i key user@host cmd` 或写脚本一次性完成。
