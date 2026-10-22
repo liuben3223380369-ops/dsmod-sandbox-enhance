@@ -8,6 +8,7 @@ for c in bash git python3 pip jq rg fd vim tmux htop openssl sqlite3 jadx \
 done
 echo "=== python 模块 ==="
 python3 -c "import apkid;print('apkid',apkid.__version__)" 2>&1
-python3 -c "import frida;print('frida',frida.__version__)" 2>&1
+echo "=== frida（预期 MISSING） ==="
+python3 -c "import frida;print('frida',frida.__version__)" 2>&1 | head -1
 echo "=== 网络 ==="
 curl -sS -o /dev/null -w 'tuna %{http_code}\n' https://mirrors.tuna.tsinghua.edu.cn/alpine/

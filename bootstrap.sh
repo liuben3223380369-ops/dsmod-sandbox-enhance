@@ -20,4 +20,9 @@ cat > /etc/profile.d/10-dt.sh <<'P'
 export PATH="/opt/dt/bin:/opt/jadx/bin:$PATH"
 P
 chmod +x /etc/profile.d/10-dt.sh
+cat > /usr/local/bin/apktool <<W
+#!/bin/sh
+exec java -jar /opt/dt/jar/apktool.jar "$@"
+W
+chmod +x /usr/local/bin/apktool
 echo "done"
