@@ -43,3 +43,7 @@
 ## PATH
 `/etc/profile.d/10-dt.sh` 已写入 `/opt/dt/bin:/opt/jadx/bin`，新 shell 自动生效；
 当前 shell 执行 `. /etc/profile.d/10-dt.sh`。
+
+## 命令落地方式（重要）
+所有工具都是 `/usr/local/bin/` 下的 sh wrapper，**不依赖 PATH 是否加载 profile**。
+即使 `env -i sh -c 'command -v aapt2'` 也能找到。
