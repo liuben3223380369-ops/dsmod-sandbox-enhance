@@ -47,3 +47,15 @@
 ## 命令落地方式（重要）
 所有工具都是 `/usr/local/bin/` 下的 sh wrapper，**不依赖 PATH 是否加载 profile**。
 即使 `env -i sh -c 'command -v aapt2'` 也能找到。
+
+## 语言运行时
+| 语言 | 状态 | 命令 |
+|---|---|---|
+| Python 3.12 | ✅ 已装 | `python3` / `pip`（tuna 源） |
+| Node.js + npm | ✅ 已装 | `node` / `npm`（npmmirror 源） |
+| Go | ✅ 已装 | `go`（goproxy.cn） |
+| C / C++ | ✅ 已装 | `gcc` / `g++`（build-base） |
+| Rust | ⚪ 可选 | `apk add rust cargo`（~400MB） |
+| PHP | ⚪ 可选 | `apk add php83 php83-cli php83-phar` |
+| Kotlin/Scala/Groovy | ⚪ 可选 | `langdev init kotlin` 走 openjdk17 |
+| .NET | ⚪ 可选 | `apk add dotnet8`（体积大） |

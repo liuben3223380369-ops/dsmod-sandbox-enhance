@@ -33,3 +33,10 @@ export PATH="/opt/dt/bin:/opt/jadx/bin:$PATH"
 P
 chmod +x /etc/profile.d/10-dt.sh
 echo "done"
+
+# 语言运行时（按需，可注释掉）
+apk add --no-cache nodejs npm go
+npm config set registry https://registry.npmmirror.com
+go env -w GOPROXY=https://goproxy.cn,direct
+# rust 体积大（~400MB），按需手动: apk add rust cargo
+# php: apk add php83 php83-cli php83-phar
